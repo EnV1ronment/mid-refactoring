@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "EMS2.0-MM-CONTROLLER",
+      "script": "./",
+      "cwd": "./",
+      "watch": [
+        "bin",
+        "public",
+        "routes",
+        "views"
+      ],
+      "exec_mode": "cluster",
+      "instances": "max",
+      "instance_var": "INSTANCE_ID",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

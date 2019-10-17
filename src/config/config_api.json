@@ -1,0 +1,6 @@
+{
+    "serverName": "ems-gateway",
+    "urlPrefix": "/api/",
+    "controlName": "nzplatform",
+    "message": "messageforward"
+}
