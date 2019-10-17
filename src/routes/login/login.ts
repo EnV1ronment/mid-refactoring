@@ -6,10 +6,6 @@ import * as loginControllers from "../../controllers/login/loginControllers";
 import * as firmsControllers from "../../controllers/firms/firmsControllers";
 import * as QRcodeControllers from "../../controllers/QR_code/QR_codeControllers";
 
-interface Results {
-    results: any;
-    token: string;
-}
 const router = Router();
 /**
  * @api {post} /login 登入
