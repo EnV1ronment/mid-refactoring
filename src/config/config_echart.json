@@ -1,0 +1,32 @@
+{
+  "REAL_VALUE": "#6150d0",
+  "FORECAST_VALUE": "#56f2ca",
+  "INCOME_VALUE": "#edc412",
+  "HISTORY_VALUE": "#0ca660",
+  "FUTURE_VALUE": "#646464",
+  "SLIGHT_ALARM": "#999900",
+  "MODERATE_ALARM": "#eaad19",
+  "SERIOUS_ALARM": "#f14646",
+  "REPAIR_VALUE": "#22add3",
+  "OVERHAUL_VALUE": "#797cfc",
+  "MAINTENANCE": "#2175f2",
+  "ANALOG_VALUE": [
+    "#08ba9e",
+    "#31d6f5",
+    "#e84f68",
+    "#c652cb",
+    "#f29e79",
+    "#7ff041",
+    "#c23531",
+    "#2f4554",
+    "#61a0a8",
+    "#d48265",
+    "#91c7ae",
+    "#749f83",
+    "#ca8622",
+    "#bda29a",
+    "#6e7074",
+    "#546570",
+    "#c4ccd3"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "SERVER_CONNECT_FAIL": {
+    "errorCode": 51,
+    "errorMsg": "数据中心暂时无法连接"
+  },
+  "SERVER_RESP_ERROR": {
+    "errorCode": 51,
+    "errorMsg": "数据中心返回数据错误"
+  },
+  "SERVER_CONNECT_TIMEOUT": {
+    "errorCode": 51,
+    "errorMsg": "数据中心连接超时"
+  },
+  "FIRM_UNBIND": {
+    "errorCode": 52,
+    "errorMsg": "The user has not binded a firm or firm ID has not provided"
+  },
+  "TOKEN_CHECK_FAIL": {
+    "errorCode": 52,
+    "errorMsg": "Verification failed, please re-signin"
+  },
+  "USER_DISABLE": {
+    "errorCode": 52,
+    "errorMsg": "Your account has been disabled"
+  },
+  "FIRM_NOT_FOUND": {
+    "errorCode": 52,
+    "errorMsg": "No corresponding station"
+  },
+  "FIRM_UNBIND_STATION": {
+    "errorCode": 52,
+    "errorMsg": "No binding station"
+  },
+  "VERIFY_CODE_FAIL": {
+    "errorCode": 52,
+    "errorMsg": "Verification code error"
+  },
+  "ANALOG_NOT_FOUND": {
+    "errorCode": 52,
+    "errorMsg": "No corresponding data"
+  },
+  "USER_NOT_FOUND": {
+    "errorCode": 52,
+    "errorMsg": "The account does not exist"
+  },
+  "USER_HAD_REGISTER": {
+    "errorCode": 52,
+    "errorMsg": "The account has been registered"
+  },
+  "DEVICE_NOT_FOUND": {
+    "errorCode": 52,
+    "errorMsg": "No device data"
+  }
+}
