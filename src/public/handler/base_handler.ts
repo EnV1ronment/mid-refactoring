@@ -1,6 +1,9 @@
 // 基础处理模块
 
 // 设备中英文对照字典
+import app from "../../app";
+const jwt = require('jsonwebtoken');
+
 const DEVICE_DICTIONARY: any = {
   id: 'ID',
   code: '设备代码',
@@ -198,9 +201,19 @@ export function dataToFix(target: number, digits: number = 2) {
  * @param {*} baseDataType
  */
 export function baseRespFactory(baseDataType: any = []) {
-  return {
-    results: baseDataType,
-    errorCode: 0,
-    errorMsg: ''
-  };
+    return {
+        results: baseDataType,
+        errorCode: 0,
+        errorMsg: ''
+    };
+}
+/**
+ * 生成Token
+ * @param {*} content
+ */
+export function createToken(content: any = []) {
+    return jwt.sign(
+        content,
+        app.get('superSecret')
+    );
 }
