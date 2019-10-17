@@ -6,7 +6,6 @@
     "lint": "eslint src --fix --ext .ts,.tsx ",
     "start": "cross-env ENV_FILE=production node -r ./env -r module-alias/register ./dist/src/start.js",
     "start-dev": "nodemon --config \"./util/nodemon.json\"",
-    "test": "nyc --reporter=html mocha ./test/base_handler.test.js --exit",
     "doc": "apidoc -i src/routes/ -o src/public/apidoc"
   },
   "husky": {
@@ -32,6 +31,7 @@
     "log4js": "^5.2.1",
     "pm2": "^3.5.1",
     "request": "^2.88.0",
+    "jsonwebtoken": "^8.3.0",
     "eureka-js-client": "^4.3.0",
     "http-errors": "~1.6.3"
   },
