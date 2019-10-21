@@ -10,7 +10,7 @@ const router = Router();
  * @apiGroup App
  * @apiDescription 获取APP下载二维码
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/login/QR_code
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */

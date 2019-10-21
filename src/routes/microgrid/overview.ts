@@ -13,7 +13,7 @@ const router = Router();
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取汇总信息
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/summary
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -31,7 +31,7 @@ router.get('/summary', async (req: IRequest, res: IResponse, next: NextFunction)
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取安全运行天数信息
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/safe/days
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -49,7 +49,7 @@ router.get('/safe/days', async (req: IRequest, res: IResponse, next: NextFunctio
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取天气信息
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/weather
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -68,7 +68,7 @@ router.get('/weather', async (req: IRequest, res: IResponse, next: NextFunction)
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取运行状态信息
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/status
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -86,7 +86,7 @@ router.get('/status', async (req: IRequest, res: IResponse, next: NextFunction) 
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取出力曲线
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/output/curve
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -104,7 +104,7 @@ router.get('/output/curve', async (req: IRequest, res: IResponse, next: NextFunc
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取运行详情
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/details
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -122,7 +122,7 @@ router.get('/details', async (req: IRequest, res: IResponse, next: NextFunction)
  * @apiGroup Microgrid-Overview
  * @apiDescription 获取异常事件
  * @apiHeader {String} access-token 用户Token
- * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/abnormal
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
