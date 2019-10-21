@@ -371,3 +371,20 @@ export function msToDate(msd: string) {
   }
   return result;
 }
+/**
+ * 日期拼接
+ *
+ * @param {String} startDate 开始日期
+ * @param {String} endDate 结束日期
+ *
+ */
+export function dateSplicing(startDate: string, endDate:string) {
+   const bit = startDate.split('-').length;
+   if (bit === 3){
+     return `${startDate} 00:00:00,${endDate} 23:59:59`;
+   }
+   if (bit === 2){
+     const endDay = getCertainMonthDays(endDate).length;
+     return `${startDate}-01 00:00:00,${endDate}${endDay + 1} 23:59:59`;
+   }
+}
