@@ -35,7 +35,7 @@ router.post('/', async (req: IRequest, res: IResponse, next: NextFunction) => {
 
         // 生成token信息
         loginReply.token = baseHandler.createToken(content);
-        const arr = loginReply.token.split('.');
+        const arr = loginReply.token.split('.')
         const key = loginReply.results.userId + loginReply.results.name + arr[arr.length - 1];
         const loginTokenParams = {
             key: key,
