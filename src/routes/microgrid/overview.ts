@@ -10,7 +10,7 @@ const router = Router();
 /**
  * @api {get} /microgrid/overview/summary 汇总看板
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取汇总信息
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/summary
@@ -28,7 +28,7 @@ router.get('/summary', async (req: IRequest, res: IResponse, next: NextFunction)
 /**
  * @api {get} /microgrid/overview/safe/days 安全运行天数
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取安全运行天数信息
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/safe/days
@@ -46,7 +46,7 @@ router.get('/safe/days', async (req: IRequest, res: IResponse, next: NextFunctio
 /**
  * @api {get} /microgrid/overview/weather 天气信息接口
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取天气信息
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/weather
@@ -65,7 +65,7 @@ router.get('/weather', async (req: IRequest, res: IResponse, next: NextFunction)
 /**
  * @api {get} /microgrid/overview/status 运行状态
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取运行状态信息
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/status
@@ -83,7 +83,7 @@ router.get('/status', async (req: IRequest, res: IResponse, next: NextFunction) 
 /**
  * @api {get} /microgrid/overview/output/curve 出力曲线
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取出力曲线
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/output/curve
@@ -101,7 +101,7 @@ router.get('/output/curve', async (req: IRequest, res: IResponse, next: NextFunc
 /**
  * @api {get} /microgrid/overview/details 运行详情
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取运行详情
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/details
@@ -119,7 +119,7 @@ router.get('/details', async (req: IRequest, res: IResponse, next: NextFunction)
 /**
  * @api {get} /microgrid/overview/abnormal  异常事件
  * @apiVersion 0.0.0
- * @apiGroup Microgrid-Overview
+ * @apiGroup Microgrid
  * @apiDescription 获取异常事件
  * @apiHeader {String} access-token 用户Token
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/abnormal

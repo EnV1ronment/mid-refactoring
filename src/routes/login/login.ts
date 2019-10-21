@@ -11,6 +11,8 @@ const router = Router();
  * @apiVersion 0.0.0
  * @apiGroup Login
  * @apiDescription 登录
+ * @apiParam {String} name 用户名.
+ * @apiParam {String} password 密码.
  * @apiSampleRequest http://192.168.2.130:3001/login
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
