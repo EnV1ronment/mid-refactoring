@@ -6,16 +6,16 @@ import * as measurementsControllers from "../../controllers/measurements/measure
 
 const router = Router();
 /**
- * @api {post} /microgrid/view/realtime 通讯视图实时值
+ * @api {post} /on-line-monitoring/system-wiring/realtime 系统接线图实时值
  * @apiVersion 0.0.0
- * @apiGroup Microgrid
- * @apiDescription 获取通讯视图实时值
+ * @apiGroup On-line-monitoring
+ * @apiDescription 获取系统接线图实时值
  * @apiHeader {String} access-token 用户Token
  * @apiParam {Number[]} analogArr 点号数组
  * @apiParam {Number[]} breakerArr 点号数组
  * @apiParam {Number[]} switchArr 点号数组
  * @apiParam {Number[]} disconnectorsArr 点号数组
- * @apiSampleRequest http://192.168.2.130:3001/microgrid/view/realtime
+ * @apiSampleRequest http://192.168.2.130:3001/on-line-monitoring/system-wiring/realtime
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
@@ -74,6 +74,31 @@ router.post('/realtime', async (req: IRequest, res: IResponse, next: NextFunctio
             }
         }
         requestHandler.responseHandle(res, results);
+    } catch (e) {
+        next(e);
+    }
+});
+
+/**
+ * @api {get} /on-line-monitoring/system-wiring/history 系统接线图历史值
+ * @apiVersion 0.0.0
+ * @apiGroup On-line-monitoring
+ * @apiDescription 获取系统接线图历史值
+ * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} pointNumber 点号
+ * @apiParam {string} startDate 开始时间
+ * @apiParam {string} endDate 结束时间
+ * @apiSampleRequest http://192.168.2.130:3001/on-line-monitoring/system-wiring/realtime
+ * @apiSuccessExample {json} Success-Response:
+ { "content": "This is an example content" }
+ */
+router.get('/history', async (req: IRequest, res: IResponse, next: NextFunction) => {
+    try {
+        const params = {
+            ...req.query
+        };
+        const reply:any = await measurementsControllers.getMeasurements(req, params);
+        requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
     }
