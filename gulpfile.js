@@ -115,7 +115,7 @@ var exists = function(src, dst, callback) {
               console.log(err)
               return false
           }
-          console.log('write file has been success');
+          console.log(dst+'新建完成');
           callback(src, dst);
         })
       }
