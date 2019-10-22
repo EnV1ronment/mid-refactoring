@@ -4,3 +4,7 @@ coverage
 .history
 logs
 .vscode
+src/public/apidoc
+yarn.lock
+yarn-error.log
+package-lock.json

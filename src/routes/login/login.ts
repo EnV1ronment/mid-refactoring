@@ -4,14 +4,18 @@ import * as requestHandler from "../../public/handler/request_handler";
 import * as baseHandler from "../../public/handler/base_handler";
 import * as loginControllers from "../../controllers/login/loginControllers";
 import * as firmsControllers from "../../controllers/firms/firmsControllers";
-import * as QRcodeControllers from "../../controllers/QR_code/QR_codeControllers";
 
 const router = Router();
 /**
- * @api {post} /login 登入
+ * @api {post} /login 登录
  * @apiVersion 0.0.0
  * @apiGroup Login
- * @apiDescription 登入
+ * @apiDescription 登录
+ * @apiParam {String} name 用户名.
+ * @apiParam {String} password 密码.
+ * @apiSampleRequest http://192.168.2.130:3001/login
+ * @apiSuccessExample {json} Success-Response:
+ { "content": "This is an example content" }
  */
 router.post('/', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
@@ -54,18 +58,4 @@ router.post('/', async (req: IRequest, res: IResponse, next: NextFunction) => {
     }
 });
 
-/**
- * @api {get} /app/QR_code APP下载二维码
- * @apiVersion 0.0.0
- * @apiGroup App
- * @apiDescription 获取APP下载二维码
- */
-router.get('/', async (req: IRequest, res: IResponse, next: NextFunction) => {
-    try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
-        requestHandler.responseHandle(res, reply);
-    } catch (e) {
-        next(e);
-    }
-});
 export default router;
