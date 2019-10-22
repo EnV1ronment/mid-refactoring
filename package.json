@@ -18,7 +18,8 @@
     "version": "0.0.0",
     "description": "ems2.0-mm-controller node api document",
     "title": "ems2.0-mm-controller node api-doc",
-    "sampleUrl": "http://localhost:3001"
+    "sampleUrl": "http://localhost:3001",
+    "preview-url": "http://localhost:3001/apidoc"
   },
   "dependencies": {
     "apidoc": "^0.17.7",
@@ -57,6 +58,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "find": "^0.3.0",
     "fs-extra": "^8.1.0",
+    "gulp": "4.0.2",
     "install": "^0.13.0",
     "jasmine": "^3.5.0",
     "jsonfile": "^5.0.0",
