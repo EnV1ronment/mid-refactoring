@@ -59,6 +59,8 @@
     "find": "^0.3.0",
     "fs-extra": "^8.1.0",
     "gulp": "4.0.2",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-rename": "^1.4.0",
     "install": "^0.13.0",
     "jasmine": "^3.5.0",
     "jsonfile": "^5.0.0",
