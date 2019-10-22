@@ -13,13 +13,14 @@ const router = Router();
  * @apiGroup Microgrid
  * @apiDescription 获取汇总信息
  * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/summary
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/summary', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
@@ -31,13 +32,14 @@ router.get('/summary', async (req: IRequest, res: IResponse, next: NextFunction)
  * @apiGroup Microgrid
  * @apiDescription 获取安全运行天数信息
  * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/safe/days
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/safe/days', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
@@ -47,15 +49,15 @@ router.get('/safe/days', async (req: IRequest, res: IResponse, next: NextFunctio
  * @api {get} /microgrid/overview/weather 天气信息接口
  * @apiVersion 0.0.0
  * @apiGroup Microgrid
- * @apiDescription 获取天气信息
- * @apiHeader {String} access-token 用户Token
+ * @apiDescription 获取天气信息* @apiHeader {String} access-token 用户Token* @apiParam {Number} stationId 电站id
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/weather
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/weather', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
@@ -68,13 +70,14 @@ router.get('/weather', async (req: IRequest, res: IResponse, next: NextFunction)
  * @apiGroup Microgrid
  * @apiDescription 获取运行状态信息
  * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/status
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/status', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
@@ -86,13 +89,14 @@ router.get('/status', async (req: IRequest, res: IResponse, next: NextFunction) 
  * @apiGroup Microgrid
  * @apiDescription 获取出力曲线
  * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/output/curve
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/output/curve', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
@@ -104,13 +108,14 @@ router.get('/output/curve', async (req: IRequest, res: IResponse, next: NextFunc
  * @apiGroup Microgrid
  * @apiDescription 获取运行详情
  * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/details
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/details', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);
@@ -122,13 +127,14 @@ router.get('/details', async (req: IRequest, res: IResponse, next: NextFunction)
  * @apiGroup Microgrid
  * @apiDescription 获取异常事件
  * @apiHeader {String} access-token 用户Token
+ * @apiParam {Number} stationId 电站id
  * @apiSampleRequest http://192.168.2.130:3001/microgrid/overview/abnormal
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
 router.get('/abnormal', async (req: IRequest, res: IResponse, next: NextFunction) => {
     try {
-        const reply:any = await QRcodeControllers.getQRcode(req);
+        const reply: any = await QRcodeControllers.getQRcode(req);
         requestHandler.responseHandle(res, reply);
     } catch (e) {
         next(e);

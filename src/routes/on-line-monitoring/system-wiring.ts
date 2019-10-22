@@ -88,7 +88,7 @@ router.post('/realtime', async (req: IRequest, res: IResponse, next: NextFunctio
  * @apiParam {Number} pointNumber 点号
  * @apiParam {string} startDate 开始时间
  * @apiParam {string} endDate 结束时间
- * @apiSampleRequest http://192.168.2.130:3001/on-line-monitoring/system-wiring/realtime
+ * @apiSampleRequest http://192.168.2.130:3001/on-line-monitoring/system-wiring/history
  * @apiSuccessExample {json} Success-Response:
  { "content": "This is an example content" }
  */
