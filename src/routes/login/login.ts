@@ -4,6 +4,7 @@ import * as requestHandler from "../../public/handler/request_handler";
 import * as baseHandler from "../../public/handler/base_handler";
 import * as loginControllers from "../../controllers/login/loginControllers";
 import * as firmsControllers from "../../controllers/firms/firmsControllers";
+import { ownReq, ownRes } from 'src/global';
 
 const router = Router();
 /**
@@ -57,5 +58,17 @@ router.post('/', async (req: IRequest, res: IResponse, next: NextFunction) => {
         next(e);
     }
 });
+
+
+router.get('/', async (req:ownReq & {body:{}} & {query:{} &{params:{}}}, res, next: NextFunction) => {
+  req.query
+  res.json({
+    results:1,
+    errorCode:1,
+    errorMsg:'22'
+  } as ownRes<{}>)
+})
+
+const data:enums<{}> = [{title:'liumm',value:'1'}]
 
 export default router;

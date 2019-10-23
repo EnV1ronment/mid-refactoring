@@ -1,5 +1,13 @@
- <% for property in model -%>
- var <$ property.name $> =1;
-<% endfor %>
+import createService from '../../../public/js/createService';
+
+ const services = {
+    <% for property in model -%>
+     <$ property.functionname $>(<%if property.req %>params: <$ property.req $> <% endif %>) {
+      return createService<<%if property.req %><$ property.req $><% else %> undefined <% endif %>, <$ property.res $>>( '<$ property.url $>|<$ property.type $>'<%if property.req %>, params <% endif %>);
+    },
+    <% endfor %>
+ }
+ export default services;
+
 
 

@@ -181,7 +181,7 @@ function code(cb) {
       }]
     }
   }
-  const tplfile = 'templates/model.js';
+  const tplfile = 'templates/model.ts';
   const watcher = watch([tplfile]);
   watcher.on('change',function (filepath, stats) {
     delete require.cache[path.join(__dirname+'/'+filepath)];
@@ -189,12 +189,12 @@ function code(cb) {
     for (const iterator of data) {
       // 以每个生成一个文件
       // filename filepath
-      nunjucksRenderConfig.data = iterator.data;
+      nunjucksRenderConfig.data = {model: iterator.model};
       console.log(iterator.data);
       gulp.src('./templates/tpl.njk')
       .pipe(nunjucksRender(nunjucksRenderConfig))
-      .pipe(rename('services.ts'))
-      .pipe(gulp.dest(config.codePath+iterator.filepath));
+      .pipe(rename('index.ts'))
+      .pipe(gulp.dest(config.codePath+iterator.filepath+'services/'));
       console.log(iterator.filepath+ '请求已更新')
     }
   })
